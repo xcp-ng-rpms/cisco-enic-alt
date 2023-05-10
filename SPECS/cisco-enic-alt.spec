@@ -7,12 +7,12 @@
 
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{vendor_label}-%{driver_name}-alt
-Version: 4.2.0.26
+Version: 4.4.0.1
 Release: 1%{?dist}
 License: GPL
 
 # Extracted from latest XS driver disk
-Source0: cisco-enic-4.2.0.26.tar.gz
+Source0: cisco-enic-4.4.0.1.tar.gz
 
 BuildRequires: gcc
 BuildRequires: kernel-devel
@@ -52,5 +52,8 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 /lib/modules/%{kernel_version}/*/*.ko
 
 %changelog
+* Tue May 09 2023 Gael Duperrey <gduperrey@vates.fr> - 4.4.0.1-1
+- Update to version 4.4.0.1
+
 * Fri Nov 25 2022 Samuel Verschelde <stormi-xcp@ylix.fr> - 4.2.0.26-1
 - initial package, version 4.2.0.26-1
