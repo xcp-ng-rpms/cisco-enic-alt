@@ -7,12 +7,12 @@
 
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{vendor_label}-%{driver_name}-alt
-Version: 4.4.0.1
+Version: 4.5.0.7
 Release: 1%{?dist}
 License: GPL
 
 # Extracted from latest XS driver disk
-Source0: cisco-enic-4.4.0.1.tar.gz
+Source0: cisco-enic-4.5.0.7.tar.gz
 
 BuildRequires: gcc
 BuildRequires: kernel-devel
@@ -52,6 +52,10 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 /lib/modules/%{kernel_version}/*/*.ko
 
 %changelog
+* Mon Feb 26 2024 Gael Duperrey <gduperrey@vates.fr> - 4.5.0.7-1
+- Update to version 4.5.0.7
+- Synced from XS driver SRPM cisco-enic-4.5.0.7-1.xs8~2_1.src.rpm
+
 * Tue May 09 2023 Gael Duperrey <gduperrey@vates.fr> - 4.4.0.1-1
 - Update to version 4.4.0.1
 
