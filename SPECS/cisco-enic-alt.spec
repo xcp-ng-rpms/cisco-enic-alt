@@ -8,7 +8,10 @@
 Summary: %{vendor_name} %{driver_name} device drivers
 Name: %{vendor_label}-%{driver_name}-alt
 Version: 4.4.0.1
-Release: 1%{?dist}
+Release: 2%{?dist}
+# Built against new kABI after cip rebase
+Requires: xcpng-kernel-kabi = 4.19.325-cip134+
+
 License: GPL
 
 # Extracted from latest XS driver disk
@@ -52,6 +55,9 @@ find %{buildroot}/lib/modules/%{kernel_version} -name "*.ko" -type f | xargs chm
 /lib/modules/%{kernel_version}/*/*.ko
 
 %changelog
+* Mon Aug 31 2026 Quentin Casasnovas <quentin.casasnovas@vates.tech> - 4.4.0.1-2
+- Rebuild for kernel v4.19.325-cip134
+
 * Tue May 09 2023 Gael Duperrey <gduperrey@vates.fr> - 4.4.0.1-1
 - Update to version 4.4.0.1
 
